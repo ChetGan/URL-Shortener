@@ -11,7 +11,7 @@ The front-end is written in React and is running on the Nginx webserver.
 The back-end REST API is written in Python and Flask. 
 The database used is MongoDB, which is controlled through the REST API.
 
-![Diagram](docs/static_files/moby-project-logo.png "The Moby Project")
+![Diagram](URLShortenerDiagram.png)
 
 # Running the application:
 The application will be executed through Docker/docker-compose.
