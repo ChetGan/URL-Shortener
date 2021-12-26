@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+URL Shortener Application By Chetan Ganipineni
+===============================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview: 
+The URL Shortener application follows the four essential requirements mentioned in the
+document. (https://docs.google.com/document/d/1LNzYR2WyjJoTs2Rh6wblKfFphMve6_MVTK6tYVDNw3A/edit)
 
-## Available Scripts
+Users can input a valid HTTP/HTTPS URL into the React form and expect a shortened URL. This application
+runs on the Nginx webserver (localhost:8080).
 
-In the project directory, you can run:
+The front-end is written in React and is running on the Nginx webserver.
+The back-end REST API is written in Python and Flask. 
+The database used is MongoDB, which is controlled through the REST API.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running the application:
+The application will be executed through Docker/docker-compose.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Instructions for running the program:
+1. Download the source code and go to the root directory of the project
+2. (Make sure to have Docker installed!) Run the command 'docker-compose -f docker-compose.yml up --build'. That's it! Everything should be running.
+    a. To turn off the application, run the command 'docker-compose down'
+    b. To turn it back on, run the command 'docker-compose up'
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Testing:
+By default, all tests should run after executing the docker-compose command in step two of running the application.
+If you want manually unit test each service, the instructions are below.
 
-### `npm run build`
+# Instructions for testing the React Application:
+1. Go to the project directory
+2. (Make sure to have npm installed!) Run the command 'npm test'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Instructions for testing the API:
+1. Navigate to the 'url-shortener-api' directory
+2. Run the command 'python3 test_cases.python3'
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## MongoDB Table:
+The database and the collection are automatically created through docker-compose and the REST API.
+Each document in the table has three attributes: '_id', 'original_url', and 'slug'.
+(e.g.) {"_id":{"$oid":"61c2394f2988b5c32a99e37e"},"original_url":"http://127.0.0.1:5000/","slug":"5ac637"}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Ports:
+React/Nginx: 8080
+Python/Flask API: 5001
+MongoDB: 27017
+    Collection name: url-shortener-db
+    Username: mongodb
+    Password: mongodb

@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  urlshortener-mongodb:
+    image : mongo:latest
+    container_name: urlshortener-mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongodb
+      - MONGO_INITDB_ROOT_PASSWORD=mongodb
+      - MONGO_INITDB_DATABASE=urls-db
+    volumes:
+      - ./mongo/data/db:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+  urlshortener-api:
+    container_name: urlshortener-api
+    restart: unless-stopped
+    build:
+      context: ./url-shortener-api
+      dockerfile: Dockerfile
+    ports:
+      - 5001:5001
+    env_file:
+      - ./url-shortener-api/.env
+  urlshortener-ui:
+    container_name: urlshortener-ui
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"

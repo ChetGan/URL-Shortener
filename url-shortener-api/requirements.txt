@@ -1,0 +1,7 @@
+#All latest versions
+pymongo
+pymongo[srv]
+python-dotenv
+Flask
+
+#All dependencies specified in corresponding docker file
