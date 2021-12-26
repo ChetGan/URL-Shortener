@@ -2,8 +2,7 @@ URL Shortener Application By Chetan Ganipineni
 ===============================================
 
 # Overview: 
-The URL Shortener application follows the four essential requirements mentioned in the
-document. (https://docs.google.com/document/d/1LNzYR2WyjJoTs2Rh6wblKfFphMve6_MVTK6tYVDNw3A/edit)
+A URL Shortener application
 
 Users can input a valid HTTP/HTTPS URL into the React form and expect a shortened URL. This application
 runs on the Nginx webserver (localhost:8080).
@@ -12,6 +11,7 @@ The front-end is written in React and is running on the Nginx webserver.
 The back-end REST API is written in Python and Flask. 
 The database used is MongoDB, which is controlled through the REST API.
 
+![Diagram](docs/static_files/moby-project-logo.png "The Moby Project")
 
 # Running the application:
 The application will be executed through Docker/docker-compose.
@@ -21,7 +21,6 @@ The application will be executed through Docker/docker-compose.
 2. (Make sure to have Docker installed!) Run the command 'docker-compose -f docker-compose.yml up --build'. That's it! Everything should be running.
     a. To turn off the application, run the command 'docker-compose down'
     b. To turn it back on, run the command 'docker-compose up'
-
 
 # Testing:
 By default, all tests should run after executing the docker-compose command in step two of running the application.
