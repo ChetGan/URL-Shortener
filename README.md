@@ -1,5 +1,5 @@
-URL Shortener Application By Chetan Ganipineni
-===============================================
+URL Shortener Application
+=========================
 
 # Overview: 
 A URL Shortener application
