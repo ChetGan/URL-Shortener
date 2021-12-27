@@ -10,6 +10,7 @@ LICENSE
 .vscode
 build
 .dockerignore
+URLShortenerDiagram.png
 **/.git
 **/.DS_Store
 **/node_modules

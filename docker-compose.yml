@@ -1,12 +1,12 @@
 version: '3.8'
 services:
   urlshortener-mongodb:
-    image : mongo:latest
+    image: docker.io/library/mongo:latest
     container_name: urlshortener-mongodb
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mongodb
-      - MONGO_INITDB_ROOT_PASSWORD=mongodb
-      - MONGO_INITDB_DATABASE=urls-db
+      MONGO_INITDB_ROOT_USERNAME: mongodb
+      MONGO_INITDB_ROOT_PASSWORD: mongodb
+      MONGO_INITDB_DATABASE: urls-db
     volumes:
       - ./mongo/data/db:/data/db
     ports:
@@ -29,4 +29,4 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - 8080:8080
