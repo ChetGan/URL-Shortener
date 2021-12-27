@@ -35,9 +35,9 @@ If you want manually unit test each service, the instructions are below.
 
 # urlshortener-api
 http://localhost:5001
-POST /api/urls            - Return shortened URL
-GET /api/resolve/{slug}   - Resolve short URL to original URL
-GET /api/health           - Check health of API
+- POST /api/urls            - Return shortened URL
+- GET /api/resolve/{slug}   - Resolve short URL to original URL
+- GET /api/health           - Check health of API
 
 # MongoDB Table:
 The database and the collection are automatically created through docker-compose and the REST API.
@@ -51,3 +51,6 @@ Each document in the table has three attributes: '_id', 'original_url', and 'slu
 - Collection name: url-shortener-db
 - Username: mongodb
 - Password: mongodb
+
+# Homepage
+![Diagram](homepage.png)
