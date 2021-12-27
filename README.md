@@ -1,5 +1,5 @@
-URL Shortener Application
-=========================
+URL Shortener Application By Chetan Ganipineni
+===============================================
 
 # Overview: 
 A URL Shortener application
@@ -19,8 +19,8 @@ The application will be executed through Docker/docker-compose.
 ## Instructions for running the program:
 1. Download the source code and go to the root directory of the project
 2. (Make sure to have Docker installed!) Run the command 'docker-compose -f docker-compose.yml up --build'. That's it! Everything should be running.
-3. To turn off the application, run the command 'docker-compose down'
-4. To turn it back on, run the command 'docker-compose up'
+    a. To turn off the application, run the command 'docker-compose down'
+    b. To turn it back on, run the command 'docker-compose up'
 
 # Testing:
 By default, all tests should run after executing the docker-compose command in step two of running the application.
