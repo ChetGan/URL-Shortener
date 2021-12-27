@@ -37,7 +37,7 @@ If you want manually unit test each service, the instructions are below.
 # MongoDB Table:
 The database and the collection are automatically created through docker-compose and the REST API.
 Each document in the table has three attributes: '_id', 'original_url', and 'slug'.
-(e.g.) {"_id":{"$oid":"61c2394f2988b5c32a99e37e"},"original_url":"http://127.0.0.1:5000/","slug":"5ac637"}
+- (e.g.) {"_id":{"$oid":"61c2394f2988b5c32a99e37e"},"original_url":"http://127.0.0.1:5000/","slug":"5ac637"}
 
 # Ports:
 React/Nginx: 8080
