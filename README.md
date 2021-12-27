@@ -33,6 +33,12 @@ If you want manually unit test each service, the instructions are below.
 1. Navigate to the **url-shortener-api** directory
 2. Run the command **python3 test_cases.python3**
 
+# urlshortener-api
+http://localhost:5001
+POST /api/urls            - Return shortened URL
+GET /api/resolve/{slug}   - Resolve short URL to original URL
+GET /api/health           - Check health of API
+
 # MongoDB Table:
 The database and the collection are automatically created through docker-compose and the REST API.
 Each document in the table has three attributes: '_id', 'original_url', and 'slug'.
