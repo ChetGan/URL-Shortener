@@ -5,7 +5,7 @@ URL Shortener Application
 A URL Shortener application
 
 Users can input a valid HTTP/HTTPS URL into the React form and expect a shortened URL. This application
-runs on the Nginx webserver (localhost:8080).
+runs on the Nginx webserver (http://localhost:8080).
 
 The front-end is written in React and is running on the Nginx webserver.
 The back-end REST API is written in Python and Flask. 
@@ -39,9 +39,9 @@ Each document in the table has three attributes: '_id', 'original_url', and 'slu
 - (e.g.) {"_id":{"$oid":"61c2394f2988b5c32a99e37e"},"original_url":"http://127.0.0.1:5000/","slug":"5ac637"}
 
 # Endpoints:
-- React/Nginx: 8080
-- Python/Flask API: 5001
-- MongoDB: 27017
+- React/Nginx: http://localhost:8080
+- Python/Flask API: http://localhost:5001
+- MongoDB: localhost:27017
 - Collection name: url-shortener-db
 - Username: mongodb
 - Password: mongodb
