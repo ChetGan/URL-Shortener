@@ -18,9 +18,8 @@ The application will be executed through Docker/docker-compose.
 
 ## Instructions for running the program:
 1. Download the source code and go to the root directory of the project
-2. (Make sure to have Docker installed!) Run the command ==docker-compose -f docker-compose.yml up --build==. That's it! Everything should be running.
-3. To turn off the application, run the command 'docker-compose down'
-4. To turn it back on, run the command 'docker-compose up'
+2. (Make sure to have Docker installed!) Run the command **docker-compose -f docker-compose.yml up --build**. That's it! Everything should be running.
+3. To turn off the application, run the command **docker-compose -f docker-compose.yml down -v**
 
 # Testing:
 By default, all tests should run after executing the docker-compose command in step two of running the application.
@@ -28,11 +27,11 @@ If you want manually unit test each service, the instructions are below.
 
 ## Instructions for testing the React Application:
 1. Go to the project directory
-2. (Make sure to have npm installed!) Run the command ==npm test==
+2. (Make sure to have npm installed!) Run the command **npm test**
 
 ## Instructions for testing the API:
-1. Navigate to the ==url-shortener-api== directory
-2. Run the command ==python3 test_cases.python3==
+1. Navigate to the **url-shortener-api** directory
+2. Run the command **python3 test_cases.python3**
 
 # MongoDB Table:
 The database and the collection are automatically created through docker-compose and the REST API.
@@ -43,6 +42,6 @@ Each document in the table has three attributes: '_id', 'original_url', and 'slu
 - React/Nginx: 8080
 - Python/Flask API: 5001
 - MongoDB: 27017
-    -- Collection name: url-shortener-db
-    -- Username: mongodb
-    -- Password: mongodb
+- Collection name: url-shortener-db
+- Username: mongodb
+- Password: mongodb
