@@ -4,9 +4,9 @@ services:
     image : mongo:latest
     container_name: urlshortener-mongodb
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mongodb
-      - MONGO_INITDB_ROOT_PASSWORD=mongodb
-      - MONGO_INITDB_DATABASE=urls-db
+      MONGO_INITDB_ROOT_USERNAME: mongodb
+      MONGO_INITDB_ROOT_PASSWORD: mongodb
+      MONGO_INITDB_DATABASE: urls-db
     volumes:
       - ./mongo/data/db:/data/db
     ports:
